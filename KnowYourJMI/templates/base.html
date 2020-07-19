@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>KnowYourJMI</title>
+    {# apni css #}
+    <link rel="stylesheet" href="{% static "css/master.css" %}">
     <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -49,6 +52,21 @@
   {% block content %}
 
   {% endblock %}
-
+  <div class="card-footer text-muted">
+    <div class="row">
+      <div class="col-sm-2">
+        <p>follow us on: </p><br>
+      </div>
+     <div class="col-sm-2">
+       <a href="https://www.instagram.com" target="_blank"><img src="https://logonoid.com/images/instagram-logo.png" alt="IG" width="20"></a>
+     </div>
+     <div class="col-sm-2">
+       <a href="https://www.linkedin.com" target="_blank"><img src="https://image.flaticon.com/icons/png/512/124/124011.png" alt="linkedIn" width="20"></a>
+     </div>
+     <div class="col-sm-2">
+       <a href="https://tweeter.com" target="_blank"><img src="https://blog.bitmex.com/wp-content/uploads/2018/10/kisspng-social-media-iphone-organization-logo-twitter-5abe3024502f30.2043853815224136043284.jpg" alt="Tweeter" width="20"></a>
+     </div>
+   </div>
+ </div>
   </body>
 </html>
