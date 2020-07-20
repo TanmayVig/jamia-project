@@ -1,0 +1,15 @@
+{% extends "Students/students_base.html" %}
+{% block precontent %}
+<div class="container">
+  <h1>List of all students:</h1>
+</div>
+{% endblock %}
+{% block incontent %}
+  <ul>
+    {% for student in Students %}
+    <a href="{% url 'students:studentdetail' username=student.user.username %}">
+      <li>{{student.user.username}}</li>
+    </a>
+    {% endfor %}
+  </ul>
+{% endblock %}

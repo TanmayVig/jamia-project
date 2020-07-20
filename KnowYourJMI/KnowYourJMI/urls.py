@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Index.as_view(), name='home'),
     path('accounts/', include('accounts.urls', namespace='accounts')),
-    path('thanks/',views.Thanks.as_view(),name='thanks')
+    path('thanks/',views.Thanks.as_view(),name='thanks'),
+    path('students/',include('Students.urls', namespace='students')),
 ]
 
 if settings.DEBUG:
