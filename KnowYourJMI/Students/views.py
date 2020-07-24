@@ -7,7 +7,10 @@ from . import models
 # Create your views here.
 
 User=get_user_model()
-class StudentList(generic.ListView):
-    model=models.Students
+class StudentListView(generic.ListView):
+    model=User
+    queryset=User.objects.all()
+    template_name='Students/students_list.html'
 class StudentDetail(generic.DetailView):
-    model=models.Students
+    model=models.User
+    template_name='Students/students_detail.html'

@@ -3,6 +3,6 @@ from . import views
 
 app_name='students'
 urlpatterns=[
-    path('',views.StudentList.as_view(), name='studentlist'),
-    path('<username>/',views.StudentDetail.as_view(), name='studentdetail'),
+    path('',views.StudentListView.as_view(), name='students'),
+    path('<int:pk>/',views.StudentDetail.as_view(), name='single'),
 ]

@@ -5,11 +5,13 @@
 </div>
 {% endblock %}
 {% block incontent %}
-  <ul>
-    {% for student in Students %}
-    <a href="{% url 'students:studentdetail' username=student.user.username %}">
-      <li>{{student.user.username}}</li>
-    </a>
-    {% endfor %}
+<div class="jumbotron">
+  <ul class="list-group list-group-horizontal">
+  {% for student in user_list %}
+  <a href="{% url 'students:single' pk=student.id %}" class="list-group-item list-group-item-action">
+    <li class="list-group-item">{{student.username}}</li>
+  </a>
+  {% endfor %}
   </ul>
+</div>
 {% endblock %}
